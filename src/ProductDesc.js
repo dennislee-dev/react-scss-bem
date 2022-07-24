@@ -4,35 +4,35 @@ import caret from './images/caret.svg';
 
 export const ProductDesc = ({ name, description, rating, features, shade }) => (
   <section>
-    <h2>{name}</h2>
-    <p>{description}</p>
-    <figure>
-      <img src={rating} alt="Product Rating" />
+    <h2 className="product-desc__name">{name}</h2>
+    <p className="product-desc__desc">{description}</p>
+    <figure className="product-desc__rating">
+      <img className="product-desc__rating-image" src={rating} alt="Product Rating" />
       <img src={caret} alt="View All Ratings" />
     </figure>
-    <section>
-      <div>
-        <h4>Benefits</h4>
-        <p>{features.benefits}</p>
+    <section className="product-desc__features-wrapper">
+      <div className="product-desc__feature">
+        <h4 className="product-desc__feature-name">Benefits</h4>
+        <p className="product-desc__feature-desc">{features.benefits}</p>
       </div>
-      <div>
-        <h4>Finish</h4>
-        <p>{features.finish}</p>
+      <div className="product-desc__feature">
+        <h4 className="product-desc__feature-name">Finish</h4>
+        <p className="product-desc__feature-desc">{features.finish}</p>
       </div>
-      <div>
-        <h4>Coverage</h4>
-        <p>{features.coverage}</p>
+      <div className="product-desc__feature">
+        <h4 className="product-desc__feature-name">Coverage</h4>
+        <p className="product-desc__feature-desc">{features.coverage}</p>
       </div>
-      <div>
-        <h4>Key Ingredients</h4>
-        <p>
+      <div className="product-desc__feature">
+        <h4 className="product-desc__feature-name">Key Ingredients</h4>
+        <p className="product-desc__feature-desc">
           {features.keyIngredients} <a href="http://www.clinique.com">More</a>
         </p>
       </div>
     </section>
-    <section>
+    <section className="product-desc__shade">
       <span>{shade.name}</span>
-      <div style={{ background: shade.color }}></div>
+      <div className="product-desc__shade-color-wrapper" style={{ background: shade.color }}></div>
     </section>
   </section>
 );

@@ -21,11 +21,12 @@ export const Product = ({
 }) => (
   <main className="main">
     <div className="product-info">
+      <h4 className="product-desc__category mobile">{category}</h4>
       <div className="product-image">
         <ProductImage image={imgURL} />
       </div>
       <div className="product-desc">
-        <h4>{category}</h4>
+        <h4 className="product-desc__category desktop">{category}</h4>
         <div>
           <ProductDesc
             category={category}
@@ -35,7 +36,7 @@ export const Product = ({
             features={features}
             shade={shade}
           />
-          <hr />
+          <div className="product-desc__hr-wrapper" />
           <ProductPurchase price={price} />
         </div>
       </div>
